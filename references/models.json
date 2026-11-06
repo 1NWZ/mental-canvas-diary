@@ -1,0 +1,11 @@
+{
+  "image_generation": {
+    "model_name": "Seedream 5.0 Pro",
+    "endpoint_id": "ep-20260914155654-cjmcd"
+  },
+  "planning": {
+    "model_name": "豆包 2.0-lite",
+    "endpoint_id": "ep-20260914174304-5d8v2"
+  },
+  "github_sync": false
+}
