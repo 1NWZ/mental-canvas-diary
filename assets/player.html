@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>立体电子手帐</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f0eeea;color:#453c39;font:14px system-ui;display:grid;place-items:center;min-height:100vh}main{width:min(100vw,620px)}canvas{display:block;width:100%;max-height:85vh;object-fit:contain;background:white;touch-action:none}nav{display:flex;align-items:center;gap:16px;padding:14px}button{border:1px solid #d5c9be;border-radius:18px;background:white;color:inherit;padding:7px 16px}input{flex:1;min-width:20px}p{font-size:12px;margin:0 14px 15px;color:#786d65}</style>
+<main><canvas aria-label="可拖动旋转的立体手帐"></canvas><nav><button id="play">暂停</button><input aria-label="动画进度" id="seek" type="range" min="0" max="1000" value="0"><button id="reset">重播</button></nav><p>拖动旋转 · 空格暂停 · 左右方向键逐步查看</p></main>
+<script>
+const S=__SCENE__,canvas=document.querySelector('canvas'),ctx=canvas.getContext('webgl',{alpha:false,antialias:true});canvas.width=S.width;canvas.height=S.height;
+const play=document.querySelector('#play'),seek=document.querySelector('#seek');
+let running=!matchMedia('(prefers-reduced-motion: reduce)').matches,time=0,last=null,drag=null;play.textContent=running?'暂停':'播放';
+const rad=x=>x*Math.PI/180;
+function geometry(l,t){
+ const c=S.camera,p=2*Math.PI*t/S.duration,yaw=rad((c.yaw_start||0)+(c.yaw_degrees??360)*(c.motion==='swing'?.5*Math.sin(p):(p-.22*Math.sin(2*p))/(2*Math.PI))),pitch=rad((c.pitch??6)+0*Math.sin(p)),a=rad(l.ry||0),r=rad(l.rz||0);
+ function camera(x,y,z){const xx=Math.cos(yaw)*x+Math.sin(yaw)*z,zz=-Math.sin(yaw)*x+Math.cos(yaw)*z;return [xx,Math.cos(pitch)*y-Math.sin(pitch)*zz,Math.sin(pitch)*y+Math.cos(pitch)*zz]}
+ const view=[[-.5,-.5],[.5,-.5],[.5,.5],[-.5,.5]].map(([u,v])=>{let x=u*l.w,y=v*l.h;let xx=x*Math.cos(r)-y*Math.sin(r),yy=x*Math.sin(r)+y*Math.cos(r);return camera(xx*Math.cos(a)+l.x,yy+l.y,-xx*Math.sin(a)+l.z)});
+ const zoom=(c.zoom??1);
+ return {view,depth:view.reduce((n,v)=>n+v[2],0)/4,back:camera(Math.sin(a),0,Math.cos(a))[2]<0,point(u,v){let q=view.map((_,i)=>[ (1-u)*(1-v),u*(1-v),u*v,(1-u)*v][i]);let v3=[0,1,2].map(i=>view.reduce((n,v,j)=>n+v[i]*q[j],0));let k=c.focal*zoom/(c.distance-v3[2]);return [S.width/2+v3[0]*k,S.height/2+v3[1]*k]}};
+}
+const gl=ctx;if(!gl){document.querySelector('p').textContent='此浏览器不支持 WebGL，请使用视频文件。';throw Error('WebGL unavailable');}
+function shader(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s}
+const program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,'attribute vec4 pos; attribute vec2 uv; varying vec2 v; void main(){gl_Position=pos;v=uv;}'));gl.attachShader(program,shader(gl.FRAGMENT_SHADER,'precision mediump float; uniform sampler2D tex; varying vec2 v; void main(){vec4 c=texture2D(tex,v);if(c.a<0.08)discard;gl_FragColor=vec4(c.rgb,1.0);}'));gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const vb=gl.createBuffer(),pos=gl.getAttribLocation(program,'pos'),uv=gl.getAttribLocation(program,'uv');gl.bindBuffer(gl.ARRAY_BUFFER,vb);gl.enableVertexAttribArray(pos);gl.enableVertexAttribArray(uv);gl.vertexAttribPointer(pos,4,gl.FLOAT,false,24,0);gl.vertexAttribPointer(uv,2,gl.FLOAT,false,24,16);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.clearColor(1,1,1,1);gl.viewport(0,0,S.width,S.height);
+function gpuImage(im){if(im.gpu)return im.gpu;const tx=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,tx);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,im);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);im.gpu=tx;return tx}
+function draw(t){gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);const c=S.camera,z=(c.zoom??1),n=20,f=4000,A=(f+n)/(f-n),B=-2*f*n/(f-n);
+for(const l of S.layers){const g=geometry(l,t);if((l.side==='front'&&g.back)||(l.side==='back'&&!g.back))continue;const im=g.back?l.backImage:l.frontImage;if(!im)continue;const coords=[[0,0],[1,0],[1,1],[0,1]];let data=[];for(const i of [0,1,2,0,2,3]){const [x,y,zz]=g.view[i],depth=c.distance-zz;data.push(2*c.focal*z*x/S.width,-2*c.focal*z*y/S.height,A*depth+B,depth,g.back?1-coords[i][0]:coords[i][0],coords[i][1])}gl.bindTexture(gl.TEXTURE_2D,gpuImage(im));gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(data),gl.DYNAMIC_DRAW);gl.drawArrays(gl.TRIANGLES,0,6)}seek.value=1000*t/S.duration}
+
+function toggle(){running=!running;play.textContent=running?'暂停':'播放';last=null}play.onclick=toggle;
+seek.oninput=()=>{running=false;play.textContent='播放';time=Number(seek.value)/1000*S.duration;draw(time)};
+document.querySelector('#reset').onclick=()=>{time=0;running=true;last=null;play.textContent='暂停'};
+canvas.onpointerdown=e=>{drag={x:e.clientX,t:time};canvas.setPointerCapture(e.pointerId);running=false;play.textContent='播放'};
+canvas.onpointermove=e=>{if(drag){time=((drag.t+(e.clientX-drag.x)/canvas.clientWidth*S.duration)%S.duration+S.duration)%S.duration;draw(time)}};
+canvas.onpointerup=canvas.onpointercancel=()=>drag=null;
+document.onkeydown=e=>{if(e.target.matches('input,button'))return;if(e.code==='Space'){e.preventDefault();toggle()}if(['ArrowLeft','ArrowRight'].includes(e.code)){running=false;play.textContent='播放';time=(time+(e.code==='ArrowRight'?.1:-.1)+S.duration)%S.duration;draw(time)}};
+async function load(url){const im=new Image();im.src=url;await im.decode();return im}
+Promise.all(S.layers.map(async l=>{l.frontImage=await load(l.image);l.backImage=l.back?await load(l.back):l.frontImage})).then(()=>{draw(0);requestAnimationFrame(function loop(now){if(running&&last!==null)time=(time+Math.min((now-last)/1000,.1))%S.duration;last=now;draw(time);requestAnimationFrame(loop)})}).catch(()=>{document.querySelector('p').textContent='图片加载失败，请重新生成 HTML。'});
+</script></html>
