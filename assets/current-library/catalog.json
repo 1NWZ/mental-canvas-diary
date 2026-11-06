@@ -1,0 +1,142 @@
+{
+  "active": true,
+  "scope": "用户本轮17图；旧assets/library为历史候选，不自动选用",
+  "assets": [
+    {
+      "id": "ref-01",
+      "user_image_number": 1,
+      "category": "type",
+      "file": "01-type.jpg",
+      "original_name": "8b6543b054f353bc1082c27758e4fe5c.jpg",
+      "sha256": "b70193658ec00054a516b452f2be5e259a844b6228a4195edf3b36eb5f67662f"
+    },
+    {
+      "id": "ref-02",
+      "user_image_number": 2,
+      "category": "type",
+      "file": "02-type.jpg",
+      "original_name": "338e63423e46a12a3ad1bfb2ddfce15a.jpg",
+      "sha256": "4b45d2796c8549bb471b2af396b0bbb4904bcda93eb58fa22f3dff4356beed70"
+    },
+    {
+      "id": "ref-03",
+      "user_image_number": 3,
+      "category": "type",
+      "file": "03-type.jpg",
+      "original_name": "a18933fd427c723eb88dff5cedd1b0b8.jpg",
+      "sha256": "0e20a593574a57768ff6a1915e966ebce3bc682e8c00e6a9f853235c31159673"
+    },
+    {
+      "id": "ref-04",
+      "user_image_number": 4,
+      "category": "type",
+      "file": "04-type.jpg",
+      "original_name": "aa9b746003806fd2929068ce1a7acfd8.jpg",
+      "sha256": "7acb47947ec98ba468f09fdf98470f39dd172c6432b567e6289e1ebb661e1d61"
+    },
+    {
+      "id": "ref-05",
+      "user_image_number": 5,
+      "category": "type",
+      "file": "05-type.jpg",
+      "original_name": "e52bb4c16b4f141dd8ade7be5fa8aa10.jpg",
+      "sha256": "eabb44b555865fe86e69297c42eec08fd97ed8d22ce52e9586959a5c75d0035a"
+    },
+    {
+      "id": "ref-06",
+      "user_image_number": 6,
+      "category": "sticker",
+      "file": "06-sticker.jpg",
+      "original_name": "标签🏷️_1_熊猫瓜_来自小红书网页版.jpg",
+      "sha256": "03bfa504ae9e418b730bedf73fadfbbdff716aff0ee7a3b9f412528a994acede"
+    },
+    {
+      "id": "ref-07",
+      "user_image_number": 7,
+      "category": "sticker",
+      "file": "07-sticker.jpg",
+      "original_name": "多巴胺来也_1_熊猫瓜_来自小红书网页版.jpg",
+      "sha256": "92fedc8053123a79ae3ed616aa5d2e8784d40e4deb72583386e82cfbc1d9c6aa"
+    },
+    {
+      "id": "ref-08",
+      "user_image_number": 8,
+      "category": "sticker",
+      "file": "08-sticker.jpg",
+      "original_name": "ins风星星贴纸素材_2_摸摸堆图集_来自小红书网页版.jpg",
+      "sha256": "1bd7c35e865f3b0c83aa9bc7bbe69fa982e4c8c9969e898cb480d167fc5a5e66"
+    },
+    {
+      "id": "ref-09",
+      "user_image_number": 9,
+      "category": "sticker",
+      "file": "09-sticker.jpg",
+      "original_name": "ins风星星贴纸素材_1_摸摸堆图集_来自小红书网页版.jpg",
+      "sha256": "e3561ad397ca260a078bc0d4e85eb9727ee8dced8808bb4de14ccd6e17e28774"
+    },
+    {
+      "id": "ref-10",
+      "user_image_number": 10,
+      "category": "sticker",
+      "file": "10-sticker.jpg",
+      "original_name": "字素驾到！！_1_熊猫瓜_来自小红书网页版.jpg",
+      "sha256": "a8fcffb9054aa1394d0fcbda11e9193e06b6a2672f89bfe3279913e082d211cb"
+    },
+    {
+      "id": "ref-11",
+      "user_image_number": 11,
+      "category": "sticker",
+      "file": "11-sticker.jpg",
+      "original_name": "贴纸素材库 _ K-POP ART MARKET_1_Neovia_来自小红书网页版.jpg",
+      "sha256": "a7eaed87d01b6aef12cb0df30ecadfd3d59134e59b760c663bdcf1005c17c073"
+    },
+    {
+      "id": "ref-12",
+      "user_image_number": 12,
+      "category": "jewel",
+      "file": "12-jewel.png",
+      "original_name": "下载 (9).png",
+      "sha256": "0730d33a5b720dd4579406e0d383bfe5700473c80237d37e74b9d4def262b0e6"
+    },
+    {
+      "id": "ref-13",
+      "user_image_number": 13,
+      "category": "fabric",
+      "file": "13-fabric.png",
+      "original_name": "下载 (5).png",
+      "sha256": "4b3b483d2d18ffabef3cfd2ce9f50dfb5ba1f3ef3fe420b6794635a1d2ebf573"
+    },
+    {
+      "id": "ref-14",
+      "user_image_number": 14,
+      "category": "paper",
+      "file": "14-paper.png",
+      "original_name": "下载 (6).png",
+      "sha256": "4e5dff75cebc1f2fe7e2cc13e6677a7a3f2272b30cd52872c86596b008570291"
+    },
+    {
+      "id": "ref-15",
+      "user_image_number": 15,
+      "category": "object",
+      "file": "15-object.jpg",
+      "original_name": "47速递 _ 你需要的一些苹果🍎_1_编号547_来自小红书网页版.jpg",
+      "sha256": "e6985fa9e563b89a7a60182c070e65027421d97a6d6d087cbde3403b9ddfb9a3"
+    },
+    {
+      "id": "ref-16",
+      "user_image_number": 16,
+      "category": "object",
+      "file": "16-object.jpg",
+      "original_name": "小熊软糖_ 𝑾𝒆𝑪𝒉𝒂𝒕白底头像_1_林锅巴_来自小红书网页版.jpg",
+      "sha256": "476617ebf4f4f845b1aa78ea93508e90ff299cac758a3aa55d7b3cf360b63a98"
+    },
+    {
+      "id": "ref-17",
+      "user_image_number": 17,
+      "category": "object",
+      "file": "17-object.jpg",
+      "original_name": "𝙒𝙚𝘾𝙝𝙖𝙩🍎｜白底头像红富士_1_心灵手巧棉师傅_来自小红书网页版.jpg",
+      "sha256": "f8ce1a9c0420b1a017de40d290a842a00b55c8392da0ec85008166f9210a4593"
+    }
+  ]
+}
