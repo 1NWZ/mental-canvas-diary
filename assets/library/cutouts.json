@@ -1,0 +1,275 @@
+[
+  {
+    "id": "green-bow",
+    "source_id": "e01",
+    "box": [
+      0.4,
+      0.3,
+      0.67,
+      0.43
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/green-bow.png",
+    "palette": [
+      "olive",
+      "lime",
+      "cream"
+    ]
+  },
+  {
+    "id": "clover-seal",
+    "source_id": "e01",
+    "box": [
+      0.75,
+      0.28,
+      0.99,
+      0.46
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/clover-seal.png",
+    "palette": [
+      "olive",
+      "lime",
+      "cream"
+    ]
+  },
+  {
+    "id": "blue-star",
+    "source_id": "e03",
+    "box": [
+      0.34,
+      0.03,
+      0.66,
+      0.26
+    ],
+    "background": "white",
+    "file": "assets/library/cutouts/blue-star.png",
+    "palette": [
+      "blue",
+      "mint",
+      "lime"
+    ]
+  },
+  {
+    "id": "good-things-ticket",
+    "source_id": "e04",
+    "box": [
+      0.7,
+      0.08,
+      0.97,
+      0.24
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/good-things-ticket.png",
+    "palette": [
+      "pink",
+      "blue",
+      "yellow"
+    ]
+  },
+  {
+    "id": "olive-rosette",
+    "source_id": "e07",
+    "box": [
+      0.34,
+      0.23,
+      0.62,
+      0.48
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/olive-rosette.png",
+    "palette": [
+      "pink",
+      "olive",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "id": "heart-rosette",
+    "source_id": "e07",
+    "box": [
+      0.67,
+      0.0,
+      0.99,
+      0.23
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/heart-rosette.png",
+    "palette": [
+      "pink",
+      "olive",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "id": "sunshine-label",
+    "source_id": "e08",
+    "box": [
+      0.67,
+      0.0,
+      0.99,
+      0.12
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/sunshine-label.png",
+    "palette": [
+      "yellow",
+      "green",
+      "pink"
+    ]
+  },
+  {
+    "id": "blooms-sticker",
+    "source_id": "e09",
+    "box": [
+      0.0,
+      0.0,
+      0.28,
+      0.2
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/blooms-sticker.png",
+    "palette": [
+      "pink",
+      "lilac",
+      "mint"
+    ]
+  },
+  {
+    "id": "berry-badge",
+    "source_id": "e09",
+    "box": [
+      0.32,
+      0.0,
+      0.6,
+      0.2
+    ],
+    "background": "black",
+    "file": "assets/library/cutouts/berry-badge.png",
+    "palette": [
+      "pink",
+      "lilac",
+      "mint"
+    ]
+  },
+  {
+    "id": "pink-heart-gem",
+    "source_id": "j01",
+    "box": [
+      0.9,
+      0.09,
+      0.995,
+      0.15
+    ],
+    "background": "white",
+    "file": "assets/library/cutouts/pink-heart-gem.png",
+    "palette": [
+      "silver",
+      "pink",
+      "green"
+    ]
+  },
+  {
+    "id": "pink-round-gem",
+    "source_id": "j01",
+    "box": [
+      0.71,
+      0.19,
+      0.81,
+      0.245
+    ],
+    "background": "white",
+    "file": "assets/library/cutouts/pink-round-gem.png",
+    "palette": [
+      "silver",
+      "pink",
+      "green"
+    ]
+  },
+  {
+    "id": "silver-star-gem",
+    "source_id": "j01",
+    "box": [
+      0.2,
+      0.015,
+      0.3,
+      0.07
+    ],
+    "background": "white",
+    "file": "assets/library/cutouts/silver-star-gem.png",
+    "palette": [
+      "silver",
+      "pink",
+      "green"
+    ]
+  },
+  {
+    "id": "pearl",
+    "source_id": "j01",
+    "box": [
+      0.55,
+      0.027,
+      0.635,
+      0.073
+    ],
+    "background": "white",
+    "file": "assets/library/cutouts/pearl.png",
+    "palette": [
+      "silver",
+      "pink",
+      "green"
+    ]
+  },
+  {
+    "id": "cream-paper",
+    "source_id": "m05",
+    "box": [
+      0.23,
+      0.4,
+      0.68,
+      0.76
+    ],
+    "background": "keep",
+    "file": "assets/library/cutouts/cream-paper.png",
+    "palette": [
+      "cream",
+      "gold"
+    ]
+  },
+  {
+    "id": "red-gingham",
+    "source_id": "m04",
+    "box": [
+      0.54,
+      0.61,
+      0.98,
+      0.98
+    ],
+    "background": "keep",
+    "file": "assets/library/cutouts/red-gingham.png",
+    "palette": [
+      "denim",
+      "cream",
+      "red"
+    ]
+  },
+  {
+    "id": "denim",
+    "source_id": "m04",
+    "box": [
+      0.06,
+      0.02,
+      0.48,
+      0.57
+    ],
+    "background": "keep",
+    "file": "assets/library/cutouts/denim.png",
+    "palette": [
+      "denim",
+      "cream",
+      "red"
+    ]
+  }
+]

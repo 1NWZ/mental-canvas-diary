@@ -1,0 +1,295 @@
+[
+  {
+    "id": "e01",
+    "category": "elements",
+    "file": "assets/library/elements/e01.jpg",
+    "source_name": "绿油油～_1_熊猫瓜_来自小红书网页版.jpg",
+    "palette": [
+      "olive",
+      "lime",
+      "cream"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e02",
+    "category": "elements",
+    "file": "assets/library/elements/e02.jpg",
+    "source_name": "ins风星星贴纸素材_2_摸摸堆图集_来自小红书网页版.jpg",
+    "palette": [
+      "olive",
+      "forest",
+      "cream"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e03",
+    "category": "elements",
+    "file": "assets/library/elements/e03.jpg",
+    "source_name": "ins风星星贴纸素材_1_摸摸堆图集_来自小红书网页版.jpg",
+    "palette": [
+      "blue",
+      "mint",
+      "lime"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e04",
+    "category": "elements",
+    "file": "assets/library/elements/e04.jpg",
+    "source_name": "字素驾到！！_1_熊猫瓜_来自小红书网页版.jpg",
+    "palette": [
+      "pink",
+      "blue",
+      "yellow"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e05",
+    "category": "elements",
+    "file": "assets/library/elements/e05.jpg",
+    "source_name": "随手涂鸦day26｜Tokyo暴走日记😠_1_有有_来自小红书网页版.jpg",
+    "palette": [
+      "red",
+      "black",
+      "blue"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e06",
+    "category": "elements",
+    "file": "assets/library/elements/e06.jpg",
+    "source_name": "贴纸素材库 _ K-POP ART MARKET_1_Neovia_来自小红书网页版.jpg",
+    "palette": [
+      "pink",
+      "blue",
+      "lime"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e07",
+    "category": "elements",
+    "file": "assets/library/elements/e07.jpg",
+    "source_name": "徽章美学之审美积累_1_熊猫瓜_来自小红书网页版.jpg",
+    "palette": [
+      "pink",
+      "olive",
+      "blue",
+      "red"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e08",
+    "category": "elements",
+    "file": "assets/library/elements/e08.jpg",
+    "source_name": "标签🏷️_1_熊猫瓜_来自小红书网页版.jpg",
+    "palette": [
+      "yellow",
+      "green",
+      "pink"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e09",
+    "category": "elements",
+    "file": "assets/library/elements/e09.jpg",
+    "source_name": "亮色我们喜欢你🫶🏻_1_熊猫瓜_来自小红书网页版.jpg",
+    "palette": [
+      "pink",
+      "lilac",
+      "mint"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "e10",
+    "category": "elements",
+    "file": "assets/library/elements/e10.jpg",
+    "source_name": "多巴胺来也_1_熊猫瓜_来自小红书网页版.jpg",
+    "palette": [
+      "pink",
+      "yellow",
+      "blue"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "t01",
+    "category": "type",
+    "file": "assets/library/type/t01.jpg",
+    "source_name": "4e7a0ab6e72b0c6b92893de03ec767c0.jpg",
+    "palette": [
+      "pink",
+      "black"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "t02",
+    "category": "type",
+    "file": "assets/library/type/t02.jpg",
+    "source_name": "8b6543b054f353bc1082c27758e4fe5c.jpg",
+    "palette": [
+      "yellow",
+      "black"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "t03",
+    "category": "type",
+    "file": "assets/library/type/t03.jpg",
+    "source_name": "338e63423e46a12a3ad1bfb2ddfce15a.jpg",
+    "palette": [
+      "lime",
+      "blue",
+      "black"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "t04",
+    "category": "type",
+    "file": "assets/library/type/t04.jpg",
+    "source_name": "a18933fd427c723eb88dff5cedd1b0b8.jpg",
+    "palette": [
+      "black",
+      "white"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "t05",
+    "category": "type",
+    "file": "assets/library/type/t05.jpg",
+    "source_name": "aa9b746003806fd2929068ce1a7acfd8.jpg",
+    "palette": [
+      "pink",
+      "orange",
+      "black"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "t06",
+    "category": "type",
+    "file": "assets/library/type/t06.avif",
+    "source_name": "cs-roche-pixel-a2-o.avif",
+    "palette": [
+      "yellow",
+      "navy",
+      "blue"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "m01",
+    "category": "materials",
+    "file": "assets/library/materials/m01.png",
+    "source_name": "下载 (7).png",
+    "palette": [
+      "cream",
+      "navy",
+      "gold"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "m02",
+    "category": "materials",
+    "file": "assets/library/materials/m02.png",
+    "source_name": "下载 (3).png",
+    "palette": [
+      "blue",
+      "cream"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "m03",
+    "category": "materials",
+    "file": "assets/library/materials/m03.png",
+    "source_name": "下载 (5).png",
+    "palette": [
+      "blue",
+      "cream"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "m04",
+    "category": "materials",
+    "file": "assets/library/materials/m04.png",
+    "source_name": "下载.png",
+    "palette": [
+      "denim",
+      "cream",
+      "red"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "m05",
+    "category": "materials",
+    "file": "assets/library/materials/m05.png",
+    "source_name": "下载 (6).png",
+    "palette": [
+      "cream",
+      "gold"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "m06",
+    "category": "materials",
+    "file": "assets/library/materials/m06.png",
+    "source_name": "下载 (1).png",
+    "palette": [
+      "blue",
+      "cream"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  },
+  {
+    "id": "j01",
+    "category": "jewels",
+    "file": "assets/library/jewels/j01.png",
+    "source_name": "下载 (9).png",
+    "palette": [
+      "silver",
+      "pink",
+      "green"
+    ],
+    "rights": "user_declared_authorized",
+    "status": "reference_sheet"
+  }
+]
